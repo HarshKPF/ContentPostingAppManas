@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<!--
+* CoreUI - Free Bootstrap Admin Template
+* @version v4.0.0-alpha.2
+* @link https://coreui.io
+* Copyright (c) 2021 creativeLabs Łukasz Holeczek
+* Licensed under MIT (https://coreui.io/license)
+-->
+<html lang="en">
+    <head>
+        <base href="./">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <meta name="description" content="CoreUI - Open Source Bootstrap Admin Template">
+        <meta name="author" content="Łukasz Holeczek">
+        <meta name="keyword" content="Bootstrap,Admin,Template,Open,Source,jQuery,CSS,HTML,RWD,Dashboard">
+        <title>Links</title>
+        <link rel="apple-touch-icon" sizes="57x57" href="assets/favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="assets/favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="assets/favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="assets/favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="assets/favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="assets/favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="assets/favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="assets/favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+        <link rel="manifest" href="assets/favicon/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="assets/favicon/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism.css">
+        <!-- Main styles for this application-->
+        <link href="css/style.css" rel="stylesheet">
+        <link href="css/test.css" rel="stylesheet">
+
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+        <!-- Global site tag (gtag.js) - Google Analytics-->
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-118965717-3"></script>
+
+        <script src="https://kit.fontawesome.com/b7d4f6275c.js" crossorigin="anonymous"></script>
+
+        <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        // Shared ID
+        gtag('config', 'UA-118965717-3');
+        // Bootstrap ID
+        gtag('config', 'UA-118965717-5');
+        </script>
+        <link href="vendors/@coreui/chartjs/css/coreui-chartjs.css" rel="stylesheet">
+    </head>
+    <body>
+      
+      <div id="fb-root"></div>
+      <script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
+
+      <div class="sidebar sidebar-dark sidebar-fixed sidebar-self-hiding-lg">
+          <ul class="sidebar-nav">
+            <li class="nav-title">Multi-platform Content Posting Applciation (need to think of a better name!)</li>
+
+            <!-- inactive nav item -->
+            <li class="nav-item">
+              <a class="nav-link" href="home.html">
+                <i class="fas fa-home" style="padding-left: 3px;"></i>
+                <div style="padding-left: 10px;"> Home</div>
+              </a>
+            </li>
+
+            <!-- active nav item -->
+            <li class="nav-item">
+              <div style="border-left: solid #dde2ff; height: 51px; margin-left: 0px; display: block;">
+                <a class="nav-link" href="test.html">
+                  <i class="fas fa-plus-circle" style="color: #dde2ff;"></i>
+                  <div style="padding-left: 10px; color: #dde2ff;"> Create Post</div>
+                </a>
+              </div> 
+            </li>
+          </ul>
+      </div>
+
+      <div class="wrapper container-lg">
+        <h1 style="text-align: center; padding: 25px">All done!</h1>
+
+        <!-- <div class="col-12">Check out your post on:</div>
+
+        <div class="row" style="text-align: center;">
+          <div class="col-12">
+            <div>
+              <button type="button" id="facebook-link" onclick="fbLink()" class="btn btn-outline-primary">Facebook</button>
+            </div>
+            <div id="fbPost">
+              <div class="fb-post" 
+              data-href="https://www.facebook.com/20531316728/posts/109134214692603/"
+              data-width="500"></div>
+              <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3D109134214692603%26id%3D109091084696916&show_text=true&width=500" width="500" height="186" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+            </div>
+
+            <script>
+              function fbLink() {
+                var x = document.getElementById("fbPost");
+                  if (x.style.display === "none") {
+                    x.style.display = "block";
+                  } else {
+                    x.style.display = "none";
+                  }
+                }
+            </script>
+          </div>
+
+
+          <div class="col-12">
+            <div>
+              <button type="button" id="linkedin-link" class="btn btn-outline-primary">Linkedin</button>
+            </div>
+          </div>
+
+          <div class="col-12">
+            <div>
+              <button type="button" id="instagram-link" onclick="instaLink()" class="btn btn-outline-primary">Instagram</button>
+            </div>
+            <div id="instaPost">
+              <iframe src="https://www.instagram.com/p/B5SYlkZFTBY/embed" height="500px" frameborder="0" scrolling="yes" allowtransparency="true"></iframe>
+            </div>
+
+            <script>
+              function instaLink() {
+                var x = document.getElementById("instaPost");
+                  if (x.style.display === "none") {
+                    x.style.display = "block";
+                  } else {
+                    x.style.display = "none";
+                  }
+                }
+            </script>
+          </div> -->
+
+          <div class="col-12">Check out your post on:</div>
+
+          <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="color: #dd7413;">
+                  Facebook
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3D109134214692603%26id%3D109091084696916&show_text=true&width=500" width="500" height="186" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Instagram
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <iframe src="https://www.instagram.com/p/B5SYlkZFTBY/embed" height="500px" frameborder="0" scrolling="yes" allowtransparency="true"></iframe>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Linkedin
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  ---
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </body>
+</html>

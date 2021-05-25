@@ -1,0 +1,106 @@
+body {
+    --cui-primary: #dd7413;
+}
+
+h1 {
+    color: #403B36;
+    text-align: center;
+    padding: 25px;
+}
+
+a {
+    color: #dd7413;
+}
+
+a:hover {
+    color: #ac5f18;
+}
+
+.sidebar {
+    background-color: #363740;
+}
+
+.icon-space {
+    font-size: 248px;
+}
+
+.icon-space input[type="radio"],
+.icon-space .checked {
+    display: none;
+}
+
+i {
+    cursor: pointer;
+}
+
+.checkmark {
+    color: #cccccc;
+}
+
+.icon-space:hover input ~ .checkmark {
+    color: #999999;
+}
+
+.icon-space input:checked ~ #facebook {
+    color: #3b5998;
+}
+
+.icon-space input:checked ~ #instagram {
+    color: #8135af;
+}
+
+.icon-space input:checked ~ #linkedin {
+    color: #0077b5;
+}
+
+.next-button {
+    margin-left: 75%;
+    margin-bottom: 50px;
+}
+
+.btn-outline-primary {
+    font-size: 30px;
+    border-width: 2px;
+    --cui-btn-border-color: #dd7413;
+    --cui-btn-color: #dd7413;
+    --cui-btn-hover-bg: #dd7413;
+    --cui-btn-hover-border-color: #dd7413;
+    --cui-btn-hover-color: rgba(255, 255, 255, 0.87);
+    --cui-btn-active-bg: #dd7413;
+    --cui-btn-active-border-color: #dd7413;
+    --cui-btn-active-color: rgba(255, 255, 255, 0.87);
+    --cui-btn-disabled-color: #dd7413;
+    --cui-btn-shadow: rgba(221, 116, 19, 0.5);
+}
+
+.form-control:focus {
+    color: var(--cui-input-focus-color, rgba(44, 56, 74, 0.95));
+    background-color: var(--cui-input-focus-bg, #fff);
+    border-color: var(--cui-input-focus-border-color, #dd7413);
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(221, 116, 19, 0.25);
+}
+
+.accordion-button {
+    color: #dd7413;
+    background-color: var(rgba(255, 255, 255, 0.87));
+    box-shadow: inset 0 -1px 0 var(rgba(221, 116, 19, 0.5));
+    --cui-accordion-button-shadow: rgba(221, 116, 19, 0.5);
+    border-color: var(--cui-accordion-button-focus-border-color, rgba(221, 116, 19, 0.25));
+
+    --cui-accordion-button-active-bg: #fff;
+    --cui-accordion-button-active-color: #dd7413;
+    --cui-accordion-button-bg: #fff;
+    --cui-accordion-button-color: #dd7413;
+    --cui-accordion-button-focus-border-color: #dd7413;
+}
+
+.accordion-button:not(.collapsed) {
+    color: var(--cui-accordion-button-active-color, #dd7413);
+    background-color: var(--cui-accordion-button-active-bg, rgba(255, 255, 255, 0.87));
+}
+
+
+.accordion-body {
+    text-align: center;
+}

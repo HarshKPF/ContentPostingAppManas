@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<!--
+* CoreUI - Free Bootstrap Admin Template
+* @version v4.0.0-alpha.2
+* @link https://coreui.io
+* Copyright (c) 2021 creativeLabs Łukasz Holeczek
+* Licensed under MIT (https://coreui.io/license)
+-->
+<html lang="en">
+    <head>
+        <base href="./">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <meta name="description" content="CoreUI - Open Source Bootstrap Admin Template">
+        <meta name="author" content="Łukasz Holeczek">
+        <meta name="keyword" content="Bootstrap,Admin,Template,Open,Source,jQuery,CSS,HTML,RWD,Dashboard">
+        <title>Post</title>
+        <link rel="apple-touch-icon" sizes="57x57" href="assets/favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="assets/favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="assets/favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="assets/favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="assets/favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="assets/favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="assets/favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="assets/favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+        <link rel="manifest" href="assets/favicon/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="assets/favicon/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism.css">
+        <!-- Main styles for this application-->
+        <link href="css/style.css" rel="stylesheet">
+        <link href="css/test.css" rel="stylesheet">
+        <!-- Global site tag (gtag.js) - Google Analytics-->
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-118965717-3"></script>
+
+        <script src="https://kit.fontawesome.com/b7d4f6275c.js" crossorigin="anonymous"></script>
+
+        <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        // Shared ID
+        gtag('config', 'UA-118965717-3');
+        // Bootstrap ID
+        gtag('config', 'UA-118965717-5');
+        </script>
+        <link href="vendors/@coreui/chartjs/css/coreui-chartjs.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="sidebar sidebar-dark sidebar-fixed sidebar-self-hiding-lg">
+            <ul class="sidebar-nav">
+              <li class="nav-title">Multi-platform Content Posting Applciation (need to think of a better name!)</li>
+
+              <!-- inactive nav item -->
+              <li class="nav-item">
+                <a class="nav-link" href="home.html">
+                  <i class="fas fa-home" style="padding-left: 3px;"></i>
+                  <div style="padding-left: 10px;"> Home</div>
+                </a>
+              </li>
+
+              <!-- active nav item -->
+              <li class="nav-item">
+                <div style="border-left: solid #dde2ff; height: 51px; margin-left: 0px; display: block;">
+                  <a class="nav-link" href="test.html">
+                    <i class="fas fa-plus-circle" style="color: #dde2ff;"></i>
+                    <div style="padding-left: 10px; color: #dde2ff;"> Create Post</div>
+                  </a>
+                </div> 
+              </li>
+            </ul>
+        </div>
+
+      
+        <div class="wrapper container-lg">
+          <form id="main-form">
+            <h1 style="text-align: center; padding: 25px">Type in your post details!</h1>
+
+            <!-- FACEBOOK-->
+
+            <div class="mb-3">
+              <label for="exampleFormControlTextarea1" class="form-label">Text</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="facebook_post_text"></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Image link</label>
+              <input type="email" class="form-control" id="exampleFormControlInput1" name="image_link">
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Image Caption</label>
+              <input type="email" class="form-control" id="exampleFormControlInput1" name="image_caption">
+            </div>
+
+            <!-- <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Tag(s)</label>
+              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="If you have multiple tags, seperate them with a comma">
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Location</label>
+              <input type="email" class="form-control" id="exampleFormControlInput1">
+            </div> -->
+
+
+            <!-- LINKEDIN -->
+
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Post Text</label>
+              <input type="email" class="form-control" id="exampleFormControlInput1" name="linkedin_post_text">
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Article Heading</label>
+              <input type="email" class="form-control" id="exampleFormControlInput1" name="article_heading">
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Article Text</label>
+              <input type="email" class="form-control" id="exampleFormControlInput1" name="article_text">
+            </div>
+            <!--
+            CONNECTIONS - Represents 1st degree network of owner.
+               PUBLIC - Anyone can view this.
+               LOGGED_IN - Viewable by logged in members only.
+               CONTAINER - Visibility is delegated to the owner of the container entity. For example, posts within a group are delegated to the groups authorization API for visibility authorization.
+            -->
+
+            <label for="exampleFormControlInput1" class="form-label">Post Visibility</label>
+            <select id="visibility" class="form-select" aria-label="Default select example">
+              <option value="DEFAULT" selected>Choose here:</option>
+              <option value="CONNECTIONS">Connections - Represents your 1st degree network.</option>
+              <option value="PUBLIC">Public - Anyone can view this.</option>
+              <option value="LOGGED_IN">Loggen In - Viewable by logged in members only.</option>
+              <option value="CONTAINER">Container - Visibility is delegated to the owner of the container entity.</option>
+            </select>
+
+            <div style="padding-top: 100px; text-align: right;">
+              <a href="links.html">
+                <button type="button" id="next" class="btn btn-outline-primary">Next</button>
+              </a>
+            </div>
+          </form>
+        </div>
+
+    </body>
+</html>
