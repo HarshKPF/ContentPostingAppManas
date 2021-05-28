@@ -127,12 +127,13 @@
                       <div class="checkmark" id="facebook"><i class="fab fa-facebook-square"></i></div>
                     </label>
                 </div>
+                <!--
                 <div class="form-check form-check-inline" id="in_icon" style="padding-right: 50px; padding-left: 50px;">
                   <label class="icon-space">
                     <input class="form-check-input" type="radio" name="choice" value="instagram" />
                     <div class="checkmark" id="instagram"><i class="fab fa-instagram-square"></i></div>
                   </label>
-                </div>
+                </div> -->
                 <div class="form-check form-check-inline" id="li_icon" style="padding-right: 50px; padding-left: 50px;">
                   <label class="icon-space">
                     <input class="form-check-input" type="radio" name="choice" value="linkedin" />
@@ -153,15 +154,16 @@
 
               <div class="mb-3">
                 <label for="exampleFormControlTextarea1" class="form-label">Text</label>
-                <textarea class="form-control" id="fb_text" rows="3" name="facebook_post_text"></textarea>
+                <textarea class="form-control" id="fb_text" rows="3" name="facebook_post_text" onkeyup="fb_img_disable(), fb_btn_disable()"></textarea>
               </div>
+              <label style="text-align: center; padding-top: 50px; padding-bottom: 50px; font-size: 2rem;">OR</label>
               <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Image link</label>
-                <input type="email" class="form-control" id="fb_imagelink" name="image_link">
+                <label for="exampleFormControlInput1" class="form-label">Image Link</label>
+                <input type="text" class="form-control" id="fb_imagelink" name="image_link" onkeyup="fb_text_disable(), fb_btn_disable()">
               </div>
               <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">Image Caption</label>
-                <input type="email" class="form-control" id="fb_imagecaption" name="image_caption">
+                <input type="text" class="form-control" id="fb_imagecaption" name="image_caption" onkeyup="fb_text_disable(), fb_btn_disable()">
               </div>
               <div style="text-align: right;">
                 <button type="button" id="fb_next" class="btn btn-outline-primary">Next</button>
@@ -174,25 +176,26 @@
             <form id="main-form">
               <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">Post Text</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" name="linkedin_post_text">
+                <textarea class="form-control" name="linkedin_post_text" id="li_text" onkeyup="li_article_disable()"></textarea>
               </div>
-              <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Article Heading</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" name="article_heading">
-              </div>
-              <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Article Text</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" name="article_text">
-              </div>
-
               <label for="exampleFormControlInput1" class="form-label">Post Visibility</label>
-              <select id="visibility" class="form-select" aria-label="Default select example">
+              <select class="form-select" aria-label="Default select example" id="li_visibility" onclick="li_article_disable()">
                 <option value="DEFAULT" selected>Choose here:</option>
                 <option value="CONNECTIONS">Connections - Represents your 1st degree network.</option>
                 <option value="PUBLIC">Public - Anyone can view this.</option>
                 <option value="LOGGED_IN">Loggen In - Viewable by logged in members only.</option>
                 <option value="CONTAINER">Container - Visibility is delegated to the owner of the container entity.</option>
               </select>
+              <label style="text-align: center; padding-top: 50px; padding-bottom: 50px; font-size: 2rem;">OR</label>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Article Heading</label>
+                <input type="text" class="form-control" name="article_heading" id="li_articleheading" onkeyup="li_text_disable()">
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Article Text</label>
+                <textarea class="form-control" name="article_text" id="li_articletext" onkeyup="li_text_disable()"></textarea>
+              </div>
+
             </form>
             <div style="text-align: right;">
               <button type="button" id="li_next" class="btn btn-outline-primary">Next</button>
@@ -201,7 +204,7 @@
 
           <div id="fb_link">
             <h1>All Done!</h1>
-            <h3 style="padding-bottom: 50px;">Check out your post <a href="">here!</a></h3>
+            <h3 style="padding-bottom: 50px;">Check out your post <a id="fb_output_link" target="_blank">here!</a></h3>
             <iframe id="fb_output" width="500" height="186" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture;"></iframe>
           </div>
           <div id="li_link">
@@ -214,10 +217,10 @@
             btn.disabled = true;
 
             const fb_icon = document.querySelector('#fb_icon');
-            const in_icon = document.querySelector('#in_icon');
             const li_icon = document.querySelector('#li_icon');
 
             const fb_btn = document.querySelector('#fb_next');
+            fb_btn.disabled = true;
             const li_btn = document.querySelector('#li_next');
 
             const platform = document.querySelector('#platform');
@@ -231,12 +234,20 @@
             li_link.style.display = "none";
 
             const fb_id = document.querySelector('#fb_text');
+            const fb_text = document.querySelector('#fb_text');
+            const fb_imagelink = document.querySelector('#fb_imagelink');
+            const fb_imagecaption = document.querySelector('#fb_imagecaption');
             const fb_output = document.querySelector('#fb_output');
 
+            const fb_output_link = document.querySelector('#fb_output_link');
+
+            const li_text = document.querySelector('#li_text');
+            const li_visibility = document.querySelector('#li_visibility');
+            const li_articleheading = document.querySelector('#li_articleheading');
+            const li_articletext = document.querySelector('#li_articletext');
+            const li_output = document.querySelector('#fb_output');
+
             fb_icon.onclick = function() {
-              btn.disabled = false;
-            }
-            in_icon.onclick = function() {
               btn.disabled = false;
             }
             li_icon.onclick = function() {
@@ -261,10 +272,65 @@
               }
             };
 
+            function fb_img_disable () {
+              if (fb_text.value.length > 0) {
+                fb_imagelink.disabled = true;
+                fb_imagecaption.disabled = true;
+                fb_imagelink.style["cursor"] = "not-allowed";
+                fb_imagecaption.style["cursor"] = "not-allowed";
+              }
+                else {
+                  fb_imagelink.disabled = false;
+                  fb_imagecaption.disabled = false;
+                  fb_imagelink.style["cursor"] = "text";
+                  fb_imagecaption.style["cursor"] = "text";
+              }
+            }
+
+            function fb_text_disable () {
+              if (fb_imagelink.value.length > 0 || fb_imagecaption.value.length > 0) {
+                fb_text.disabled = true;
+                fb_text.style["cursor"] = "not-allowed";
+              }
+                else {
+                  fb_text.disabled = false;
+                  fb_text.style["cursor"] = "text";
+              }
+            }
+
+            function fb_btn_disable () {
+              if (fb_imagelink.value.length > 0 || fb_imagecaption.value.length > 0 || fb_text.value.length > 0) {
+                fb_btn.disabled = false;
+              } else {
+                fb_btn.disabled = true;
+              }
+            }
+
+            function li_article_disable () {
+              if (li_text.value.length > 0) {
+                li_articletext.disabled = true;
+                li_articleheading.disabled = true;
+              } else {
+                li_articletext.disabled = false;
+                li_articleheading.disabled = false;
+              }
+            }
+
+            function li_text_disable () {
+              if (li_articleheading.value.length > 0 || li_articletext.value.length > 0) {
+                li_text.disabled = true;
+                li_visibility.disabled = true;
+              } else {
+                li_text.disabled = false;
+                li_visibility.disabled = false;
+              }
+            }
+
             fb_btn.onclick = function() {
               fb_post.style.display = "none";
               fb_link.style.display = "block";
                 console.log(fb_id.value);
+                fb_output_link.href = `https://www.facebook.com/permalink.php?story_fbid=${fb_id.value}&id=109091084696916`;
                 fb_output.src = `https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3D${fb_id.value}%26id%3D109091084696916&show_text=true&width=500`;
               }
 
